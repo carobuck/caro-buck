@@ -17,7 +17,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![Also a photo of me, after riding my first century](caro-bike.jpg){width=45%}
 
-and maybe this works?
 
 
 ```{r image_grobs, fig.show = "hold", out.width = "50%", fig.align = "default"}
