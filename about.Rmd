@@ -12,3 +12,19 @@ description: |
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+![A photo of me looking all professional](caro-headshot.jpg){width=55%} 
+
+![Also a photo of me, after riding my first century](caro-bike.jpg){width=45%}
+
+and maybe this works?
+
+
+```{r image_grobs, fig.show = "hold", out.width = "50%", fig.align = "default"}
+
+# this stuff is not currently working to display photos side by side like I want...it's a WIP
+#knitr::include_graphics("caro-headshot.jpg")
+
+#knitr::include_graphics("caro-bike.jpg")
+
+```
