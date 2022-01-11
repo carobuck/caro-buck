@@ -1,5 +1,6 @@
 name: "caro-buck"
 title: "Caro Buck"
+theme: theme.css
 description: |
   Caro Buck
 output_dir: "_site"
