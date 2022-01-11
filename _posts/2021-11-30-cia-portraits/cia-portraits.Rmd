@@ -26,6 +26,6 @@ Of course, any good data viz needs a legend to go along with it:
 
 ![legend associated with data portraits](cia-portrait-legend.png)
 
-
+The hardest part of making these portraits was figuring out the color palette. I wanted to use a bunch of our company's colors from the recent rebrand, but also had to make sure the colors would be distinguishable, still hold meaning and that I wasn't using *too* many. 
 
 
