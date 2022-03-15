@@ -105,7 +105,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Caro Buck"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","image","links","output"]}},"value":[{"type":"character","attributes":{},"value":["Caro Buck"]},{"type":"character","attributes":{},"value":["caro_pic_big.jpeg"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["label","url"]}},"value":[{"type":"character","attributes":{},"value":["GitHub"]},{"type":"character","attributes":{},"value":["https://github.com/carobuck"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["label","url"]}},"value":[{"type":"character","attributes":{},"value":["Email"]},{"type":"character","attributes":{},"value":["mailto:caro@carobuck.com"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["label","url"]}},"value":[{"type":"character","attributes":{},"value":["LinkedIn"]},{"type":"character","attributes":{},"value":["https://www.linkedin.com/in/caro-buck/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["label","url"]}},"value":[{"type":"character","attributes":{},"value":["Twitter"]},{"type":"character","attributes":{},"value":["https://twitter.com/caroissilly"]}]}]},{"type":"character","attributes":{},"value":["postcards::solana"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2368,7 +2368,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
@@ -2394,181 +2394,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).on("load", function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      page_category = decodeURIComponent(page_category)
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Caro Buck">Caro Buck</h1>
-<a href="posts/2021-11-30-cia-portraits/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Nov. 30, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Caro Buck</div>
-</div>
-</div>
-<div class="thumbnail"></div>
-<div class="description">
-<h2>cia-portraits</h2>
-<div class="dt-tags"></div>
-<p>A celebration of what makes us unique as individuals within a team.</p>
-</div>
-</a>
-<a href="posts/welcome/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Nov. 30, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Caro Buck</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/welcome/welcome_files/figure-html5/unnamed-chunk-1-1.png"/>
-</div>
-<div class="description">
-<h2>Welcome to Caro Buck</h2>
-<div class="dt-tags"></div>
-<p>Welcome to our new blog, Caro Buck. We hope you enjoy 
-reading what we have to say!</p>
-</div>
-</a>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
 <h1>Caro Buck</h1>
@@ -2579,6 +2404,17 @@ reading what we have to say!</p>
 
 
 <div class="d-article">
+<h2 id="bio">Bio</h2>
+<p>Hello! I’m Caro (short for Caroline)! I’m a curious and creative human, with a passion for data of all sorts. I love wrangling unconventional data, or using a visualization to build understanding and promote data literacy.</p>
+<p>I have worked on a wide variety of client projects, from AI-generated graffiti and time series modeling to advanced analytics and data visualization. I thrive in environments where data, curiosity, creativity and rabbit holes are encouraged.</p>
+<p>In my spare time, you’ll probably find me outside: either biking fast, wandering the neighborhood or playing Spikeball.</p>
+<p>Feel free to give a holler!</p>
+<h2 id="education">Education</h2>
+<p><strong>Seatte Pacific University</strong> | Seattle, WA</p>
+<p>B.S. Applied Mathematics | 2014 - 2018</p>
+<h2 id="experience">Experience</h2>
+<p><strong>Data Scientist</strong> | Wunderman Thompson | June 2018 - Present</p>
+<p><strong>Private Math Tutor</strong> | August 2020 - Present</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

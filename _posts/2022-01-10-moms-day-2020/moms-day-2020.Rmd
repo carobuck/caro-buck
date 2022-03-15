@@ -1,0 +1,27 @@
+---
+title: "moms-day-2020"
+description: |
+  A data-driven celebration of my mother.
+author:
+  - name: Caro Buck
+    url: https://example.com/norajones
+date: 2022-01-10
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+A couple weeks ago, I got a note from my mother. The card was gray, with floral designs on it; I recognized it immediately, because I'd made these cards for her; it was (and probably will be for a long itme to come) one of my favorite gifts I've ever given. 
+
+You're probably wondering- what's so great about these cards?? 
+
+## TODO: fix the words above and less fluffy/touchy feely. 
+
+## TODO: add pics of viz + legend. 
+
+
