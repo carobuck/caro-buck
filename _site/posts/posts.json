@@ -1,5 +1,39 @@
 [
   {
+    "path": "posts/2022-01-10-moms-day-2020/",
+    "title": "moms-day-2020",
+    "description": "A data-driven celebration of my mother.",
+    "author": [
+      {
+        "name": "Caro Buck",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2022-01-10",
+    "categories": [],
+    "contents": "\nA couple weeks ago, I got a note from my mother. The card was gray, with floral designs on it; I recognized it immediately, because I’d made these cards for her; it was (and probably will be for a long itme to come) one of my favorite gifts I’ve ever given.\nYou’re probably wondering- what’s so great about these cards??\nTODO: fix the words above and less fluffy/touchy feely.\nTODO: add pics of viz + legend.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-03-14T20:46:34-07:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-01-10-week-of-lols/",
+    "title": "week-of-lols",
+    "description": "Things I learned while keeping track of everything I laughed at for a week.",
+    "author": [
+      {
+        "name": "Caro Buck",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2022-01-10",
+    "categories": [],
+    "contents": "\nOne week, I decided to track every time I laughed. Turns out, perhaps unsurprisingly, if you know me in real life, I laugh a lot so this was a bit harder than I thought it would be.\nThings I learned: * Appreciate the small things- if I hadn’t written this stuff down, I probably wouldn’t have remembered my roommate talking about vacuuming the ceiling as her excuse to get out of Zoom meetings. Life is about the little stuff just as much as the big.\nTODO: pull stuff up from viz/data literacy deck!\nCheers!\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-03-14T20:47:02-07:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-11-30-cia-portraits/",
     "title": "cia-portraits",
     "description": "A celebration of what makes us unique as individuals within a team.",
