@@ -10,8 +10,7 @@ links:
     url: "https://www.linkedin.com/in/caro-buck/"
   - label: Twitter
     url: "https://twitter.com/caroissilly"
-output:
-  postcards::solana
+output: postcards::solana
 ---
  
 ## Bio
