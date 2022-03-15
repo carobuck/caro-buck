@@ -7,5 +7,4 @@ listing:
     - 2022-01-10-moms-day-2020
     - 2022-01-10-week-of-lols
 ---
-  # todo: figure out how to add about.Rmd to this page, so I only have to source this when I make updates to site.
-  # also figure out a better name for the site than 'Caro buck'???
+  

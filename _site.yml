@@ -9,8 +9,12 @@ navbar:
   right:
     - text: "blog"
       href: blog.html
-    - text: "About"
-      href: about.html
+    - text: "junk drawer"
+      href: junkdrawer.html
+    - text: "experimental"
+      href: experimental.html
+    - text: "about"
+      href: index.html
 collections:
   posts:
     categories: true
