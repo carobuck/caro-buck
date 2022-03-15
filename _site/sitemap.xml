@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
+  <url>
+    <loc>https://carobuck.com/about.html</loc>
+    <lastmod>2021-11-30T22:27:07-08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://carobuck.com/blog.html</loc>
+    <lastmod>2022-03-14T20:08:34-07:00</lastmod>
+  </url>
+  <url>
+    <loc>https://carobuck.com/</loc>
+    <lastmod>2022-03-14T20:26:53-07:00</lastmod>
+  </url>
+  <url>
+    <loc>https://carobuck.com/posts/2021-11-30-cia-portraits/</loc>
+    <lastmod>2022-01-10T23:43:14-08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://carobuck.com/posts/welcome/</loc>
+    <lastmod>2021-11-30T21:28:16-08:00</lastmod>
+  </url>
+</urlset>
