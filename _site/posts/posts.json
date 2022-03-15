@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2022-03-15-meow-meow-diaries/",
+    "title": "meow-meow-diaries",
+    "description": "Me and Meows.",
+    "author": [
+      {
+        "name": "Caro Buck",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2022-03-15",
+    "categories": [],
+    "contents": "\nI’ve decided I need a new side project, so I’ve decided to log my interactions with Meow Meow. Follow along for daily updates here, and stay tuned for more to come.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-03-15T10:20:34-07:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2022-01-10-moms-day-2020/",
     "title": "moms-day-2020",
     "description": "A data-driven celebration of my mother.",
