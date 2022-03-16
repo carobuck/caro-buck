@@ -1,11 +1,11 @@
 ---
 title: ""
-image: "caro_pic_big.jpeg"
+image: "caro_bainbridge.jpg"
 links:
   - label: GitHub
     url: "https://github.com/carobuck"
   - label: Email
-    url: "mailto:caro@carobuck.com"
+    url: "mailto:cbuck717@gmail.com"
   - label: LinkedIn
     url: "https://www.linkedin.com/in/caro-buck/"
   - label: Twitter
